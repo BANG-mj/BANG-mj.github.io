@@ -1,0 +1,147 @@
+---
+title: "ARENA로 AI Alignment 공부 시작하기"
+description: "ARENA 커리큘럼 소개, 10주 학습 계획, 학습 환경 셋업 후기"
+author: "BANG-mj"
+date: "2026-06-21"
+categories: [arena, intro, setup]
+image: "thumbnail.png"
+toc: true
+---
+
+## 시작하며
+
+AI alignment 분야를 본격적으로 공부하기로 했다. 무엇부터 어떻게 시작할지 한참 고민하다가 **ARENA**를 선택했고, 10주에 걸쳐 전체 커리큘럼을 따라가기로 계획을 세웠다.
+
+이 글은 시작 시점의 기록이다. ARENA가 뭔지, 왜 이걸 골랐는지, 어떤 환경에서 어떻게 진행할 건지를 한 번에 정리해두려고 한다. 10주 후 돌아봤을 때 이 글이 시작 시점의 출사표가 되길 바란다.
+
+
+## ARENA란
+
+[ARENA (Alignment Research Engineer Accelerator)](https://www.arena.education/)는 AI safety 분야 입문자를 위한 실전 중심 커리큘럼이다. 원래는 런던에서 진행되는 4~5주짜리 풀타임 부트캠프지만, 모든 커리큘럼이 [공개돼있어서](https://learn.arena.education/) 누구나 자율학습할 수 있다.
+
+특징:
+
+- **코드 중심**: 트랜스포머, RL 알고리즘, SAE 등을 처음부터 직접 구현
+- **최신 연구 반영**: Anthropic, DeepMind, UK AISI 등의 최근 논문이 실습으로 들어있음
+- **공개 자료**: 모든 노트북이 [GitHub](https://github.com/callummcdougall/ARENA_3.0)에 있고 Colab에서 바로 실행 가능
+
+5개 챕터로 구성돼있는데, 0번은 워밍업이고 1~4번이 본격적인 alignment 관련 내용이다.
+
+
+## 5개 챕터 구조
+
+### Chapter 0 — Fundamentals
+
+PyTorch 기초, CNN/ResNet, 옵티마이저, autograd 직접 구현, VAE/GAN. 
+
+### Chapter 1 — Transformer Interpretability ⭐
+
+ARENA에서 가장 큰 챕터. 트랜스포머를 처음부터 구현하고, Anthropic의 transformer circuits 연구를 따라간다. Mechanistic interpretability 입문에 좋다. SAE, IOI circuit, superposition 등 핵심 주제 다수.
+Anthropic의 trtansformer circuits을 지난 워크샵에서 다뤘는데, 이번에 실전 경험을 하면 더 깊이 이해가 될 것 같다.
+
+세부 트랙이 세 개로 나뉘어있다:
+- **Probing & Representations**: Linear probes, SAEs, Function vectors
+- **Circuits in LLMs**: IOI, SAE Circuits  
+- **Toy Models**: Balanced brackets, Grokking, OthelloGPT, Superposition
+
+### Chapter 2 — Reinforcement Learning
+
+RL 기초부터 PPO, 그리고 **RLHF**까지. Chapter 1에서 만든 트랜스포머에 RLHF를 적용한다.
+
+### Chapter 3 — LLM Evaluations
+
+요즘 AI safety 현업에서 수요가 가장 큰 분야 중 하나. UK AISI의 Inspect 라이브러리로 모델 평가, LLM agent 평가까지 다룬다.
+
+### Chapter 4 — Alignment Science
+
+가장 frontier에 가까운 챕터. Anthropic의 alignment science 연구와 직결된다. Emergent misalignment, LLM psychology, persona vectors, investigator agents 등.
+
+
+## 10주 학습 계획
+
+전체 31개 섹션 중 핵심을 중심으로 10주 안에 마치는 걸 목표로 한다. ARENA 풀타임 부트캠프가 4~5주인 걸 감안하면 자율학습으로 10주는 빡빡하지만 방학 안에 끝내는 걸 목표로 한다.
+
+| 주차 | 챕터 | 핵심 내용 |
+|---|---|---|
+| Week 1 | Ch 0 | Fundamentals — Backprop 위주 워밍업 |
+| Week 2~5 | Ch 1 | Transformer Interpretability — 트랜스포머 구현 → Mech Interp → SAE → IOI 회로 |
+| Week 6~7 | Ch 2 | RL — PPO + RLHF |
+| Week 8 | Ch 3 | LLM Evaluations — Inspect 라이브러리 활용 |
+| Week 9~10 | Ch 4 | Alignment Science — Emergent misalignment, Persona vectors |
+
+각 섹션은 ARENA가 제공하는 difficulty/importance 표시를 참고해서 ⭐⭐⭐ 이상 위주로 풀고, 그 미만은 시간에 따라 스킵하기로 했다. 모든 걸 풀려고 하면 페이스가 무너진다는 걸 ARENA 자체도 명시하고 있다. 계획은 상황에 따라 유동적으로 바뀔수도 있다.
+
+주당 평균 15~20시간 정도를 목표로 하고 있다. 평일 저녁 + 주말로 분배할 계획이다.
+
+## 학습 환경 셋업
+
+### 작업 환경
+
+- **IDE**: VS Code (Remote-SSH로 연구실 서버 접속)
+- **서버**: 연구실 GPU 서버 (Driver 570.124.04, CUDA 12.8)
+- **가상환경**: Conda `arena` (Python 3.11)
+- **PyTorch**: 2.x + cu128
+
+### 워크플로 선택
+
+ARENA는 세 가지 접근 방식을 제공한다:
+
+1. Colab 노트북에서 바로 풀기
+2. VS Code에서 blank Python 파일로 풀기
+3. VS Code에서 노트북 파일 복사해 풀기
+
+나는 **2번 (VS Code + blank `.py` 파일)** 을 골랐다. 이유:
+
+- Git history에 학습 흔적이 깔끔하게 남는다
+- 나중에 블로그 글로 옮기기 쉽다 (`.py` 파일은 마크다운 변환 부담이 없다)
+- ARENA 공식 안내도 "in-person 참가자에게 강력 추천"이라고 언급한다
+- 실제 ML 연구 워크플로에 가깝다
+
+`# %%` 셀 구분자로 VS Code에서 Jupyter처럼 인터랙티브하게 실행할 수 있어서 노트북의 장점도 살릴 수 있다.
+
+### Repository 구조
+
+원본 ARENA repo를 **본인 GitHub으로 fork**한 다음, 서버에 clone했다. 이렇게 하면:
+
+- 본인 풀이를 본인 fork에 자유롭게 commit/push할 수 있다
+- 원본이 업데이트되면 `git fetch upstream`으로 가져올 수 있다
+- 학습 흔적이 GitHub history에 영구 보존된다
+
+```bash
+# Fork → clone
+git clone git@github.com:BANG-mj/ARENA_3.0.git
+cd ARENA_3.0
+git remote add upstream https://github.com/callummcdougall/ARENA_3.0.git
+```
+
+### 진행 추적 — Notion 데이터베이스
+
+ARENA 31개 섹션을 트래킹할 Notion 데이터베이스를 만들었다. 각 섹션마다 다음을 기록한다:
+
+- **Status**: 시작 전 / 진행 중 / 완료
+- **Importance / Difficulty**: ⭐ 평가
+- **Date Started / Completed / Hours Spent**: 시간 추적
+- **My Code**: GitHub 풀이 링크
+- **Key Concepts**: 태그
+- 페이지 본문: 학습 노트, 코드 하이라이트, 막힌 부분, 회고
+
+진행률이 한눈에 보여서 동기부여에 좋고, 나중에 회고할 때도 자료가 풍부할 것 같다.
+
+
+## 블로그를 만든 이유
+
+학습 흔적을 공개적으로 남기기 위해 이 블로그를 만들었다. Quarto + GitHub Pages 조합인데, Jupyter 노트북을 그대로 글로 만들 수 있어서 ARENA 학습 정리에 적합하다.
+
+블로그가 왜 도움 되는지:
+
+- **Feynman technique**: 자기 말로 설명하려는 순간 이해 못한 부분이 드러난다
+- **장기 기억**: 3개월 뒤 induction head 개념 다시 필요할 때, 본인 글 한 번 읽는 게 논문 다시 읽는 것보다 빠르다
+- **연결고리**: superposition → SAE → SAE circuits 같은 챕터 간 연결이 글로 쓰다 보면 보인다
+- **커리어**: 공개된 학습 흔적을 보면 AI safety 분야에 관심 있는 사람이라는 걸 보여줄 수 있다
+
+목표: 매주 1개 정도의 글. 완벽한 글보다 거친 글이라도 꾸준히 올리기.
+
+
+매주 글을 한 편씩 올리는 게 목표. 이번 주는 시작했다는 의미로 이 글 하나 올린다.
+
+다음 글은 Chapter 0 첫 섹션 (0.0 Prerequisites) 풀이 후기가 될 예정이다.

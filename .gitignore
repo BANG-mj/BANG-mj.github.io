@@ -3,3 +3,4 @@
 *.html
 .env
 __pycache__/
+**/*.quarto_ipynb
