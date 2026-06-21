@@ -1,0 +1,5 @@
+/.quarto/
+/_site/
+*.html
+.env
+__pycache__/
