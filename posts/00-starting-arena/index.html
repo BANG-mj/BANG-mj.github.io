@@ -6,10 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Tristan O’Malley">
-<meta name="dcterms.date" content="2026-06-18">
+<meta name="author" content="BANG-mj">
+<meta name="dcterms.date" content="2026-06-21">
+<meta name="description" content="ARENA 커리큘럼 소개, 10주 학습 계획, 학습 환경 셋업 후기">
 
-<title>Welcome To My Blog – BANG-mj’s Blog</title>
+<title>ARENA로 AI Alignment 공부 시작하기 – BANG-mj’s Blog</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -24,6 +25,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -46,9 +82,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-8b14d9a34a5b2d1b51dadecbd6fc3350.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-e8964db687007ca8dd88d9d9ce58e3ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-8b14d9a34a5b2d1b51dadecbd6fc3350.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-bbcf60f174677d77add3838f074ec6c8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ef329cdfec84d61f1b09d4029da25417.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-bbcf60f174677d77add3838f074ec6c8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -281,9 +317,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Welcome To My Blog</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">news</div>
+      <h1 class="title">ARENA로 AI Alignment 공부 시작하기</h1>
+                  <div>
+        <div class="description">
+          ARENA 커리큘럼 소개, 10주 학습 계획, 학습 환경 셋업 후기
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">arena</div>
+                <div class="quarto-category">intro</div>
+                <div class="quarto-category">setup</div>
               </div>
                   </div>
   </div>
@@ -294,14 +337,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Tristan O’Malley </p>
+               <p>BANG-mj </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 18, 2026</p>
+        <p class="date">June 21, 2026</p>
       </div>
     </div>
     
@@ -312,8 +355,32 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#시작하며" id="toc-시작하며" class="nav-link active" data-scroll-target="#시작하며">시작하며</a></li>
+  <li><a href="#arena란" id="toc-arena란" class="nav-link" data-scroll-target="#arena란">ARENA란</a></li>
+  <li><a href="#개-챕터-구조" id="toc-개-챕터-구조" class="nav-link" data-scroll-target="#개-챕터-구조">5개 챕터 구조</a>
+  <ul class="collapse">
+  <li><a href="#chapter-0-fundamentals" id="toc-chapter-0-fundamentals" class="nav-link" data-scroll-target="#chapter-0-fundamentals">Chapter 0 — Fundamentals</a></li>
+  <li><a href="#chapter-1-transformer-interpretability" id="toc-chapter-1-transformer-interpretability" class="nav-link" data-scroll-target="#chapter-1-transformer-interpretability">Chapter 1 — Transformer Interpretability ⭐</a></li>
+  <li><a href="#chapter-2-reinforcement-learning" id="toc-chapter-2-reinforcement-learning" class="nav-link" data-scroll-target="#chapter-2-reinforcement-learning">Chapter 2 — Reinforcement Learning</a></li>
+  <li><a href="#chapter-3-llm-evaluations" id="toc-chapter-3-llm-evaluations" class="nav-link" data-scroll-target="#chapter-3-llm-evaluations">Chapter 3 — LLM Evaluations</a></li>
+  <li><a href="#chapter-4-alignment-science" id="toc-chapter-4-alignment-science" class="nav-link" data-scroll-target="#chapter-4-alignment-science">Chapter 4 — Alignment Science</a></li>
+  </ul></li>
+  <li><a href="#주-학습-계획" id="toc-주-학습-계획" class="nav-link" data-scroll-target="#주-학습-계획">10주 학습 계획</a></li>
+  <li><a href="#학습-환경-셋업" id="toc-학습-환경-셋업" class="nav-link" data-scroll-target="#학습-환경-셋업">학습 환경 셋업</a>
+  <ul class="collapse">
+  <li><a href="#작업-환경" id="toc-작업-환경" class="nav-link" data-scroll-target="#작업-환경">작업 환경</a></li>
+  <li><a href="#워크플로-선택" id="toc-워크플로-선택" class="nav-link" data-scroll-target="#워크플로-선택">워크플로 선택</a></li>
+  <li><a href="#repository-구조" id="toc-repository-구조" class="nav-link" data-scroll-target="#repository-구조">Repository 구조</a></li>
+  <li><a href="#진행-추적-notion-데이터베이스" id="toc-진행-추적-notion-데이터베이스" class="nav-link" data-scroll-target="#진행-추적-notion-데이터베이스">진행 추적 — Notion 데이터베이스</a></li>
+  </ul></li>
+  <li><a href="#블로그를-만든-이유" id="toc-블로그를-만든-이유" class="nav-link" data-scroll-target="#블로그를-만든-이유">블로그를 만든 이유</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -323,11 +390,165 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>This is the first post in a Quarto blog. Welcome!</p>
-<p><img src="thumbnail.jpg" class="img-fluid"></p>
-<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
+<section id="시작하며" class="level2">
+<h2 class="anchored" data-anchor-id="시작하며">시작하며</h2>
+<p>AI alignment 분야를 본격적으로 공부하기로 했다. 무엇부터 어떻게 시작할지 한참 고민하다가 <strong>ARENA</strong>를 선택했고, 10주에 걸쳐 전체 커리큘럼을 따라가기로 계획을 세웠다.</p>
+<p>이 글은 시작 시점의 기록이다. ARENA가 뭔지, 왜 이걸 골랐는지, 어떤 환경에서 어떻게 진행할 건지를 한 번에 정리해두려고 한다. 10주 후 돌아봤을 때 이 글이 시작 시점의 출사표가 되길 바란다.</p>
+</section>
+<section id="arena란" class="level2">
+<h2 class="anchored" data-anchor-id="arena란">ARENA란</h2>
+<p><a href="https://www.arena.education/">ARENA (Alignment Research Engineer Accelerator)</a>는 AI safety 분야 입문자를 위한 실전 중심 커리큘럼이다. 원래는 런던에서 진행되는 4~5주짜리 풀타임 부트캠프지만, 모든 커리큘럼이 <a href="https://learn.arena.education/">공개돼있어서</a> 누구나 자율학습할 수 있다.</p>
+<p>특징:</p>
+<ul>
+<li><strong>코드 중심</strong>: 트랜스포머, RL 알고리즘, SAE 등을 처음부터 직접 구현</li>
+<li><strong>최신 연구 반영</strong>: Anthropic, DeepMind, UK AISI 등의 최근 논문이 실습으로 들어있음</li>
+<li><strong>공개 자료</strong>: 모든 노트북이 <a href="https://github.com/callummcdougall/ARENA_3.0">GitHub</a>에 있고 Colab에서 바로 실행 가능</li>
+</ul>
+<p>5개 챕터로 구성돼있는데, 0번은 워밍업이고 1~4번이 본격적인 alignment 관련 내용이다.</p>
+</section>
+<section id="개-챕터-구조" class="level2">
+<h2 class="anchored" data-anchor-id="개-챕터-구조">5개 챕터 구조</h2>
+<section id="chapter-0-fundamentals" class="level3">
+<h3 class="anchored" data-anchor-id="chapter-0-fundamentals">Chapter 0 — Fundamentals</h3>
+<p>PyTorch 기초, CNN/ResNet, 옵티마이저, autograd 직접 구현, VAE/GAN.</p>
+</section>
+<section id="chapter-1-transformer-interpretability" class="level3">
+<h3 class="anchored" data-anchor-id="chapter-1-transformer-interpretability">Chapter 1 — Transformer Interpretability ⭐</h3>
+<p>ARENA에서 가장 큰 챕터. 트랜스포머를 처음부터 구현하고, Anthropic의 transformer circuits 연구를 따라간다. Mechanistic interpretability 입문에 좋다. SAE, IOI circuit, superposition 등 핵심 주제 다수. Anthropic의 trtansformer circuits을 지난 워크샵에서 다뤘는데, 이번에 실전 경험을 하면 더 깊이 이해가 될 것 같다.</p>
+<p>세부 트랙이 세 개로 나뉘어있다: - <strong>Probing &amp; Representations</strong>: Linear probes, SAEs, Function vectors - <strong>Circuits in LLMs</strong>: IOI, SAE Circuits<br>
+- <strong>Toy Models</strong>: Balanced brackets, Grokking, OthelloGPT, Superposition</p>
+</section>
+<section id="chapter-2-reinforcement-learning" class="level3">
+<h3 class="anchored" data-anchor-id="chapter-2-reinforcement-learning">Chapter 2 — Reinforcement Learning</h3>
+<p>RL 기초부터 PPO, 그리고 <strong>RLHF</strong>까지. Chapter 1에서 만든 트랜스포머에 RLHF를 적용한다.</p>
+</section>
+<section id="chapter-3-llm-evaluations" class="level3">
+<h3 class="anchored" data-anchor-id="chapter-3-llm-evaluations">Chapter 3 — LLM Evaluations</h3>
+<p>요즘 AI safety 현업에서 수요가 가장 큰 분야 중 하나. UK AISI의 Inspect 라이브러리로 모델 평가, LLM agent 평가까지 다룬다.</p>
+</section>
+<section id="chapter-4-alignment-science" class="level3">
+<h3 class="anchored" data-anchor-id="chapter-4-alignment-science">Chapter 4 — Alignment Science</h3>
+<p>가장 frontier에 가까운 챕터. Anthropic의 alignment science 연구와 직결된다. Emergent misalignment, LLM psychology, persona vectors, investigator agents 등.</p>
+</section>
+</section>
+<section id="주-학습-계획" class="level2">
+<h2 class="anchored" data-anchor-id="주-학습-계획">10주 학습 계획</h2>
+<p>전체 31개 섹션 중 핵심을 중심으로 10주 안에 마치는 걸 목표로 한다. ARENA 풀타임 부트캠프가 4~5주인 걸 감안하면 자율학습으로 10주는 빡빡하지만 방학 안에 끝내는 걸 목표로 한다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>주차</th>
+<th>챕터</th>
+<th>핵심 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Week 1</td>
+<td>Ch 0</td>
+<td>Fundamentals — Backprop 위주 워밍업</td>
+</tr>
+<tr class="even">
+<td>Week 2~5</td>
+<td>Ch 1</td>
+<td>Transformer Interpretability — 트랜스포머 구현 → Mech Interp → SAE → IOI 회로</td>
+</tr>
+<tr class="odd">
+<td>Week 6~7</td>
+<td>Ch 2</td>
+<td>RL — PPO + RLHF</td>
+</tr>
+<tr class="even">
+<td>Week 8</td>
+<td>Ch 3</td>
+<td>LLM Evaluations — Inspect 라이브러리 활용</td>
+</tr>
+<tr class="odd">
+<td>Week 9~10</td>
+<td>Ch 4</td>
+<td>Alignment Science — Emergent misalignment, Persona vectors</td>
+</tr>
+</tbody>
+</table>
+<p>각 섹션은 ARENA가 제공하는 difficulty/importance 표시를 참고해서 ⭐⭐⭐ 이상 위주로 풀고, 그 미만은 시간에 따라 스킵하기로 했다. 모든 걸 풀려고 하면 페이스가 무너진다는 걸 ARENA 자체도 명시하고 있다. 계획은 상황에 따라 유동적으로 바뀔수도 있다.</p>
+<p>주당 평균 15~20시간 정도를 목표로 하고 있다. 평일 저녁 + 주말로 분배할 계획이다.</p>
+</section>
+<section id="학습-환경-셋업" class="level2">
+<h2 class="anchored" data-anchor-id="학습-환경-셋업">학습 환경 셋업</h2>
+<section id="작업-환경" class="level3">
+<h3 class="anchored" data-anchor-id="작업-환경">작업 환경</h3>
+<ul>
+<li><strong>IDE</strong>: VS Code (Remote-SSH로 연구실 서버 접속)</li>
+<li><strong>서버</strong>: 연구실 GPU 서버 (Driver 570.124.04, CUDA 12.8)</li>
+<li><strong>가상환경</strong>: Conda <code>arena</code> (Python 3.11)</li>
+<li><strong>PyTorch</strong>: 2.x + cu128</li>
+</ul>
+</section>
+<section id="워크플로-선택" class="level3">
+<h3 class="anchored" data-anchor-id="워크플로-선택">워크플로 선택</h3>
+<p>ARENA는 세 가지 접근 방식을 제공한다:</p>
+<ol type="1">
+<li>Colab 노트북에서 바로 풀기</li>
+<li>VS Code에서 blank Python 파일로 풀기</li>
+<li>VS Code에서 노트북 파일 복사해 풀기</li>
+</ol>
+<p>나는 <strong>2번 (VS Code + blank <code>.py</code> 파일)</strong> 을 골랐다. 이유:</p>
+<ul>
+<li>Git history에 학습 흔적이 깔끔하게 남는다</li>
+<li>나중에 블로그 글로 옮기기 쉽다 (<code>.py</code> 파일은 마크다운 변환 부담이 없다)</li>
+<li>ARENA 공식 안내도 “in-person 참가자에게 강력 추천”이라고 언급한다</li>
+<li>실제 ML 연구 워크플로에 가깝다</li>
+</ul>
+<p><code># %%</code> 셀 구분자로 VS Code에서 Jupyter처럼 인터랙티브하게 실행할 수 있어서 노트북의 장점도 살릴 수 있다.</p>
+</section>
+<section id="repository-구조" class="level3">
+<h3 class="anchored" data-anchor-id="repository-구조">Repository 구조</h3>
+<p>원본 ARENA repo를 <strong>본인 GitHub으로 fork</strong>한 다음, 서버에 clone했다. 이렇게 하면:</p>
+<ul>
+<li>본인 풀이를 본인 fork에 자유롭게 commit/push할 수 있다</li>
+<li>원본이 업데이트되면 <code>git fetch upstream</code>으로 가져올 수 있다</li>
+<li>학습 흔적이 GitHub history에 영구 보존된다</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fork → clone</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:BANG-mj/ARENA_3.0.git</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ARENA_3.0</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add upstream https://github.com/callummcdougall/ARENA_3.0.git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="진행-추적-notion-데이터베이스" class="level3">
+<h3 class="anchored" data-anchor-id="진행-추적-notion-데이터베이스">진행 추적 — Notion 데이터베이스</h3>
+<p>ARENA 31개 섹션을 트래킹할 Notion 데이터베이스를 만들었다. 각 섹션마다 다음을 기록한다:</p>
+<ul>
+<li><strong>Status</strong>: 시작 전 / 진행 중 / 완료</li>
+<li><strong>Importance / Difficulty</strong>: ⭐ 평가</li>
+<li><strong>Date Started / Completed / Hours Spent</strong>: 시간 추적</li>
+<li><strong>My Code</strong>: GitHub 풀이 링크</li>
+<li><strong>Key Concepts</strong>: 태그</li>
+<li>페이지 본문: 학습 노트, 코드 하이라이트, 막힌 부분, 회고</li>
+</ul>
+<p>진행률이 한눈에 보여서 동기부여에 좋고, 나중에 회고할 때도 자료가 풍부할 것 같다.</p>
+</section>
+</section>
+<section id="블로그를-만든-이유" class="level2">
+<h2 class="anchored" data-anchor-id="블로그를-만든-이유">블로그를 만든 이유</h2>
+<p>학습 흔적을 공개적으로 남기기 위해 이 블로그를 만들었다. Quarto + GitHub Pages 조합인데, Jupyter 노트북을 그대로 글로 만들 수 있어서 ARENA 학습 정리에 적합하다.</p>
+<p>블로그가 왜 도움 되는지:</p>
+<ul>
+<li><strong>Feynman technique</strong>: 자기 말로 설명하려는 순간 이해 못한 부분이 드러난다</li>
+<li><strong>장기 기억</strong>: 3개월 뒤 induction head 개념 다시 필요할 때, 본인 글 한 번 읽는 게 논문 다시 읽는 것보다 빠르다</li>
+<li><strong>연결고리</strong>: superposition → SAE → SAE circuits 같은 챕터 간 연결이 글로 쓰다 보면 보인다</li>
+<li><strong>커리어</strong>: 공개된 학습 흔적을 보면 AI safety 분야에 관심 있는 사람이라는 걸 보여줄 수 있다</li>
+</ul>
+<p>목표: 매주 1개 정도의 글. 완벽한 글보다 거친 글이라도 꾸준히 올리기.</p>
+<p>매주 글을 한 편씩 올리는 게 목표. 이번 주는 시작했다는 의미로 이 글 하나 올린다.</p>
+<p>다음 글은 Chapter 0 첫 섹션 (0.0 Prerequisites) 풀이 후기가 될 예정이다.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
