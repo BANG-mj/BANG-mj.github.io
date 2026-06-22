@@ -391,8 +391,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="시작하며" class="level2">
 <h2 class="anchored" data-anchor-id="시작하며">시작하며</h2>
-<p>AI alignment 분야를 본격적으로 공부하기로 했다. 무엇부터 어떻게 시작할지 한참 고민하다가 <strong>ARENA</strong>를 선택했고, 10주에 걸쳐 전체 커리큘럼을 따라가기로 계획을 세웠다.</p>
-<p>이 글은 시작 시점의 기록이다. ARENA가 뭔지, 왜 이걸 골랐는지, 어떤 환경에서 어떻게 진행할 건지를 한 번에 정리해두려고 한다. 10주 후 돌아봤을 때 이 글이 시작 시점의 출사표가 되길 바란다.</p>
+<p>정확한 분야를 정하지 못한채로 막연하게 MI, bias에 대해 한 학기 동안 연구를 했다. 내가 앞으로 나아갈 ’기술적’인 방향은 AI alignment가 맞겠다는 생각이 들어 본격적으로 공부하기로 했다. 무엇부터 어떻게 시작할지 한참 고민하다가 <strong>ARENA</strong>를 선택했고, 10주에 걸쳐 전체 커리큘럼을 따라가기로 계획을 세웠다. 6월말 ~ 8월말까지 방학기간에 집중적으로 공부를 해보려고 한다.</p>
+<p>이 글은 ARENA AI alignment 커리큘럼을 따라가기 위해 set up한 환경과 계획에 대한 내용을 담을 예정이다. ARENA가 뭔지, 왜 선택했는지, 어떤 환경을 구축했는지, 10주 계획을 어떻게 세웠는지 정리해보려고 한다.</p>
 </section>
 <section id="arena란" class="level2">
 <h2 class="anchored" data-anchor-id="arena란">ARENA란</h2>
@@ -413,7 +413,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="chapter-1-transformer-interpretability" class="level3">
 <h3 class="anchored" data-anchor-id="chapter-1-transformer-interpretability">Chapter 1 — Transformer Interpretability ⭐</h3>
-<p>ARENA에서 가장 큰 챕터. 트랜스포머를 처음부터 구현하고, Anthropic의 transformer circuits 연구를 따라간다. Mechanistic interpretability 입문에 좋다. SAE, IOI circuit, superposition 등 핵심 주제 다수. Anthropic의 trtansformer circuits을 지난 워크샵에서 다뤘는데, 이번에 실전 경험을 하면 더 깊이 이해가 될 것 같다.</p>
+<p>ARENA에서 가장 큰 챕터. 트랜스포머를 처음부터 구현하고, Anthropic의 transformer circuits 연구를 따라간다. Mechanistic interpretability 입문에 좋다. SAE, IOI circuit, superposition 등 핵심 주제 다수. Anthropic의 trtansformer circuits을 지난 워크샵에서 다뤘는데, 이번에 실전 경험을 하면 더 깊이 이해가 될 것 같다. 또한 현재 진행하고 있는 연구가 SAE와 직결되기 때문에 연구에도 도움이 많이 될 것으로 예상된다.</p>
 <p>세부 트랙이 세 개로 나뉘어있다: - <strong>Probing &amp; Representations</strong>: Linear probes, SAEs, Function vectors - <strong>Circuits in LLMs</strong>: IOI, SAE Circuits<br>
 - <strong>Toy Models</strong>: Balanced brackets, Grokking, OthelloGPT, Superposition</p>
 </section>
@@ -474,8 +474,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>각 섹션은 ARENA가 제공하는 difficulty/importance 표시를 참고해서 ⭐⭐⭐ 이상 위주로 풀고, 그 미만은 시간에 따라 스킵하기로 했다. 모든 걸 풀려고 하면 페이스가 무너진다는 걸 ARENA 자체도 명시하고 있다. 계획은 상황에 따라 유동적으로 바뀔수도 있다.</p>
-<p>주당 평균 15~20시간 정도를 목표로 하고 있다. 평일 저녁 + 주말로 분배할 계획이다.</p>
+<p>각 섹션은 ARENA가 제공하는 difficulty/importance 표시를 참고해서 ⭐⭐⭐ 이상 위주로 풀고, 그 미만은 시간에 따라 스킵하기로 했다. 모든 걸 풀려고 하면 페이스가 무너진다는 걸 ARENA 자체도 명시하고 있다. 또한 이 계획은 상황에 따라 유동적으로 바뀔수도 있다.</p>
+<p>주당 평균 15~20시간 정도를 목표로 하고 있다. 평일 저녁 + 주말로 분배할 계획이다. 이번 방학에는 개인 연구, 협업 연구, 워크샵 준비를 병행해야한다. 시간을 잘 관리해서 어느 하나도 놓치지 않도록 하고 싶다. 아자자~</p>
 </section>
 <section id="학습-환경-셋업" class="level2">
 <h2 class="anchored" data-anchor-id="학습-환경-셋업">학습 환경 셋업</h2>
@@ -507,7 +507,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="repository-구조" class="level3">
 <h3 class="anchored" data-anchor-id="repository-구조">Repository 구조</h3>
-<p>원본 ARENA repo를 <strong>본인 GitHub으로 fork</strong>한 다음, 서버에 clone했다. 이렇게 하면:</p>
+<p>원본 ARENA repo를 <strong>내 GitHub으로 fork</strong>한 다음, 서버에 clone했다. 이렇게 하면:</p>
 <ul>
 <li>본인 풀이를 본인 fork에 자유롭게 commit/push할 수 있다</li>
 <li>원본이 업데이트되면 <code>git fetch upstream</code>으로 가져올 수 있다</li>
@@ -529,21 +529,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Key Concepts</strong>: 태그</li>
 <li>페이지 본문: 학습 노트, 코드 하이라이트, 막힌 부분, 회고</li>
 </ul>
-<p>진행률이 한눈에 보여서 동기부여에 좋고, 나중에 회고할 때도 자료가 풍부할 것 같다.</p>
+<p>진행률이 한눈에 보여서 동기부여에 좋고, 나중에 회고할 때도 자료가 풍부할 것 같다. 또한 이 내용을 바탕으로 블로그에 다시 한번 정리할 예정이다.</p>
 </section>
 </section>
 <section id="블로그를-만든-이유" class="level2">
 <h2 class="anchored" data-anchor-id="블로그를-만든-이유">블로그를 만든 이유</h2>
-<p>학습 흔적을 공개적으로 남기기 위해 이 블로그를 만들었다. Quarto + GitHub Pages 조합인데, Jupyter 노트북을 그대로 글로 만들 수 있어서 ARENA 학습 정리에 적합하다.</p>
-<p>블로그가 왜 도움 되는지:</p>
-<ul>
-<li><strong>Feynman technique</strong>: 자기 말로 설명하려는 순간 이해 못한 부분이 드러난다</li>
-<li><strong>장기 기억</strong>: 3개월 뒤 induction head 개념 다시 필요할 때, 본인 글 한 번 읽는 게 논문 다시 읽는 것보다 빠르다</li>
-<li><strong>연결고리</strong>: superposition → SAE → SAE circuits 같은 챕터 간 연결이 글로 쓰다 보면 보인다</li>
-<li><strong>커리어</strong>: 공개된 학습 흔적을 보면 AI safety 분야에 관심 있는 사람이라는 걸 보여줄 수 있다</li>
-</ul>
-<p>목표: 매주 1개 정도의 글. 완벽한 글보다 거친 글이라도 꾸준히 올리기.</p>
-<p>매주 글을 한 편씩 올리는 게 목표. 이번 주는 시작했다는 의미로 이 글 하나 올린다.</p>
+<p>학습 흔적을 공개적으로 남기기 위해 이 블로그를 만들었다. Quarto + GitHub Pages를 사용했고, Jupyter 노트북을 그대로 글로 만들 수 있어서 ARENA 학습 정리에 적합하고 생각했다.</p>
+<p>단순히 내용을 따라 쓰기 보다는 내 언어로 바꾸어 설명하는 과정에서 더 깊은 이해를 할 수 있을 것 같다. 또한 나중에 내가 정리한 내용을 다시 확인하기도 유용할 것 같다. 방학 동안 꾸준히 공부하고 글을 올려서 내 커리어에도 도움이 되면 좋겠다.</p>
+<p>목표: 매주 1개 정도의 글. 완벽한 글보다 rough한 글이라도 꾸준히 올리기.</p>
 <p>다음 글은 Chapter 0 첫 섹션 (0.0 Prerequisites) 풀이 후기가 될 예정이다.</p>
 
 
