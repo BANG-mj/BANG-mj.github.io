@@ -1,10 +1,10 @@
 ---
 title: "ARENA로 AI Alignment 공부 시작하기"
 description: "ARENA 커리큘럼 소개, 10주 학습 계획, 학습 환경 셋업 후기"
-author: "BANG-mj"
+author: "Minji Bang"
 date: "2026-06-21"
-categories: [arena, intro, setup]
-image: "thumbnail.png"
+categories: [arena, ai-alignment]
+image: "arena_logo.jpg"
 toc: true
 ---
 
